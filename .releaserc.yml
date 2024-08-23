@@ -13,10 +13,10 @@ plugins:
       verifyReleaseCmd: ./gradlew verifyNoSnapshotDependencies
 
       # prepare - set release version (if using version file)
-      # prepareCmd: ./gradlew "-PnewVersion=${nextRelease.version}" setReleaseVersion
+      prepareCmd: ./gradlew "-PnewVersion=${nextRelease.version}" setReleaseVersion
 
       # publish - verify that version is release version and perform publishing tasks
-      publishCmd: ./gradlew showVersion verifyReleaseVersion publishPlugins
+      publishCmd: ./gradlew showVersion verifyReleaseVersion publish -PpublishToGithub=true
   - - "@semantic-release/git"
     - assets:
         - CHANGELOG.md

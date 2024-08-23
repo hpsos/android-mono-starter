@@ -8,8 +8,14 @@
 
 plugins {
   id ('java-gradle-plugin')
-  id ('com.gradle.plugin-publish') version "1.2.1"
   id ('to.wetransform.semantic-release-version') version '2.1.1'
+}
+
+ext {
+  // ... other properties
+  githubUser = 'tianyingchun'
+  githubToken = 'YOUR_GITHUB_TOKEN'
+  // (Replace with your actual values)
 }
 
 
@@ -19,14 +25,15 @@ def javaProjects = [
     project(":app"),
 ]
 
+
 configure(javaProjects) {
     println "${project.name}"
-    apply plugin: 'application'
     version '1.0.0'
+    apply plugin: 'java-library'
+
     repositories {
         mavenCentral()
     }
-
     dependencies {
 
     }
@@ -34,4 +41,28 @@ configure(javaProjects) {
     test {
         useJUnitPlatform()
     }
+    // Configure the "publish" task (in your module's `build.gradle`)
+    // publishing {
+    //     repositories {
+    //         maven {
+    //             url "https://maven.pkg.github.com/hpsos/android-mono-starter"
+    //             credentials {
+    //                 username githubUser
+    //                 password githubToken
+    //             }
+    //         }
+    //     }
+    // }
+    // In your module's `build.gradle` file
+    task publishToGithub(type: PublishToMavenLocal) {
+        // If necessary, set your pom configuration:
+        // pom {
+        // ... your project's pom configuration
+        // }
+    }
+
+    task publish(dependsOn: [publishToGithub, 'publishToMavenLocal']) {
+        group = 'Publishing'
+    }
+    
 }
