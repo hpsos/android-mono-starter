@@ -7,6 +7,12 @@ The starter to demonstrate how android monorepo changesets can automatically bum
 - https://buck2.build/docs/about/getting_started/#creating-your-first-hello_world-project
 - https://github.com/gorhom/react-monorepo
 - https://earthly.dev/blog/gradle-monorepo/
+- https://docs.fastlane.tools/getting-started/ios/beta-deployment/
+- https://github.com/wetransform-os/gradle-semantic-release-version
+
+## Reused workflows
+
+- https://github.com/wetransform/gha-workflows/tree/ac5514fee04f1b8ba18483fe8ff82c70fd134505
 
 ## QA
 

@@ -5,7 +5,6 @@
   "type": "module",
   "scripts": {
     "g:build": "./gradlew build",
-    "g:lint-staged-files": "lint-staged --allow-empty",
     "lint": "eslint .",
     "lint-fix": "yarn lint --fix",
     "prepare": "husky"
@@ -26,7 +25,6 @@
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^9.9.0",
     "husky": "9.1.5",
-    "lint-staged": "15.2.9",
     "typescript": "^5.5.4",
     "vitest": "^2.0.5"
   },
