@@ -6,9 +6,9 @@
  */
 
 def javaProjects = [
-        project(":subproject-1"),
-        project(":subproject-2"),
-        project(":subproject-3"),
+    project(":lib_core"),
+    project(":lib_utils"),
+    project(":app"),
 ]
 
 configure(javaProjects) {

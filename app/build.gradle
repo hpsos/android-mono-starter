@@ -1,7 +1,7 @@
-mainClassName = 'subproject.App'
+mainClassName = 'org.hpsos.App'
 
 dependencies {
-    implementation project(":subproject-2")
+    implementation project(":lib_utils")
 }
 
 // Custom run task
@@ -9,3 +9,4 @@ task runApp(type: JavaExec) {
     mainClass = mainClassName
     classpath = sourceSets.main.runtimeClasspath + sourceSets.main.output
 }
+
