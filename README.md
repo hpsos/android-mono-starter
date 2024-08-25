@@ -9,6 +9,7 @@ The starter to demonstrate how android monorepo changesets can automatically bum
 - https://earthly.dev/blog/gradle-monorepo/
 - https://docs.fastlane.tools/getting-started/ios/beta-deployment/
 - https://github.com/wetransform-os/gradle-semantic-release-version
+- https://gitlab.com/gitlab-org/container-registry/-/blob/master/.releaserc.yml?ref_type=heads
 
 ## Reused workflows
 
